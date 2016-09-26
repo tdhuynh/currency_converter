@@ -15,15 +15,15 @@ class Money:
 
     def __add__(self, other):
         conversion_formula(self, other)
-        return self.amount + other.amount
+        return Money(self.amount + other.amount, self.symbol)
 
     def __mul__(self, other):
         conversion_formula(self, other)
-        return self.amount * other.amount
+        return Money(self.amount * other.amount, self.symbol)
 
     def __sub__(self, other):
         conversion_formula(self, other)
-        return self.amount - other.amount
+        return Money(self.amount - other.amount, self.symbol)
 
     def __ge__(self, other):
         conversion_formula(self, other)
@@ -52,7 +52,6 @@ class Money:
     def __str__(self):
         return "{} {}".format(self.amount, self.symbol)
 
-money3 = Money(.89, 'EUR')
-money4 = Money(100.31, 'JPY')
-x = Money(20, 'USD') + Money(50, 'EUR')
-print(x)
+
+sum_all =   Money(.0016, 'BTC') + Money(100.31, 'JPY') + Money(.89, 'EUR') + Money(1, 'USD')
+print(sum_all)
