@@ -55,4 +55,4 @@ class Money:
 
 sum_all = Money(1, 'USD') + Money(100.31, 'JPY') + Money(.89, 'EUR') + Money(.0016, 'BTC')
 print(sum_all)
-print(Money(.0016, 'BTC') == Money(1, 'USD'))
+print(Money(100.31, 'JPY') == Money(1, 'USD'))
